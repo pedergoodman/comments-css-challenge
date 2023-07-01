@@ -1,0 +1,114 @@
+:root{
+  --comment-bg: #459f81;
+  --vote-bg: rgba(138, 43, 226, 60%);
+}
+
+body {
+  text-align: center;
+}
+
+img.profile-img {
+  width: 40px;
+}
+
+
+
+.comment-container {
+  background: var(--comment-bg);
+  border-radius: 15px;
+  /* padding: 15px 25px; */
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 420px;
+  max-width: 620px;
+  min-height: 120px;
+}
+
+
+.up-vote-container * {
+  background-color: blue;
+  margin: 6px 0px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.up-vote-container img {
+  background-color: rgb(194, 36, 173);
+  scale: 150%;
+}
+
+.up-vote-container {
+  padding: 14px;
+  margin: 15px;
+  background-color: var(--vote-bg);
+  border-radius: 14px;
+}
+
+
+
+/* right half of comment box */
+section.comment-info {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Upper section  */
+
+.info-upper-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* top level profile info, buttons */
+.profile-info, .comment-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.profile-info .user-name {
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  /* color: black; */
+}
+
+.profile-info .comment-date {
+  padding-left: 10px;
+  font-size: 18px;
+  color: rgb(76, 76, 76);
+}
+
+/* For reply/ edit / delete button containers */
+button {
+  display: flex;
+  margin: 0 20px;
+  font-size: 18px;
+  align-items: center;
+  border-color: var(--vote-bg);
+  background: none;
+  color: rgb(138, 43, 226);
+  padding: 0;
+  height: auto;
+}
+
+.comment-buttons img{
+    padding-right: 6px;
+}
+
+.comment-text {
+  margin: 0;
+}
+
+/* Comment text */

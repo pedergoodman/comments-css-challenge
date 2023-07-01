@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <!-- Fonts from google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,46 +17,134 @@
   <title>CSS Challenge | Interactive comments section</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles.css">
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Comment #1 -->
-  12
-  <img src="./images/avatars/image-amyrobson.png" alt="profile" />
-  amyrobson 
-  1 month ago
-  Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+
+  <div class="comment-container">
+    <div class="up-vote-container">
+      <img src="images/icon-plus.svg" alt="upvote-btn">
+      <p>12</p>
+      <img src="images/icon-minus.svg" alt="downvote-btn">
+    </div>
+    <section class="comment-info">
+      <div class="info-upper-section">
+        <div class="profile-info">
+          <img src="./images/avatars/image-amyrobson.png" alt="profile" class="profile-img" />
+          <p class="user-name">amyrobson</p>
+          <p class="comment-date">1 month ag</p>
+        </div>
+        <div>
+          <button>
+            <img src="images/icon-reply.svg" alt="reply button">
+            <p>Reply</p>
+        </div>
+      </div>
+      <p class="comment-text">Impressive! Though it seems the drag feature could be improved. But overall it looks
+        incredible. You've nailed the design and the responsiveness at various breakpoints works really well. </p>
+    </section>
+  </div>
 
   <!-- Comment #2 -->
-  5
-  <img src="./images/avatars/image-maxblagun.png" alt="profile" />
-  maxblagun 
-  2 weeks ago
-  Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+  <div class="comment-container">
+    <div class="up-vote-container">
+      <img src="images/icon-plus.svg" alt="upvote-btn">
+      <p>5</p>
+      <img src="images/icon-minus.svg" alt="downvote-btn">
+    </div>
+    <section class="comment-info">
+      <div class="info-upper-section">
+        <div class="profile-info">
+          <img src="./images/avatars/image-maxblagun.png" alt="profile" class="profile-img" />
+          <p class="user-name">maxblagun</p>
+          <p class="comment-date">2 weeks ago</p>
+        </div>
 
+        <div class="comment-buttons">
+          <button>
+            <img src="images/icon-reply.svg" alt="reply button">Reply
+          </button>
+        </div>
+      </div>
+      <p class="comment-text">Woah, your project looks awesome! How long have you been coding for? I'm still new, but
+        think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React?
+        Thanks!</p>
+    </section>
+  </div>
   <!-- Comment #3 (Reply to comment #2) -->
-  4
-  <img src="./images/avatars/image-ramsesmiron.png" alt="profile" />
-  ramsesmiron 
-  1 week ago
-  @maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+  <div class="comment-container">
+    <div class="up-vote-container">
+      <img src="images/icon-plus.svg" alt="upvote-btn">
+      <p>4</p>
+      <img src="images/icon-minus.svg" alt="downvote-btn">
+    </div>
+    <section class="comment-info">
+      <div class="info-upper-section">
+        <div class="profile-info">
+          <img src="./images/avatars/image-ramsesmiron.png" alt="profile" class="profile-img" />
+          <p class="user-name">ramsesmiron </p>
+          <p class="comment-date">1 week ago</p>
+        </div>
+        <div class="comment-buttons">
+          <button><img src="images/icon-reply.svg" alt="reply button">Reply</button>
+        </div>
+      </div>
+      <p class="comment-text">@maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS,
+        and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+    </section>
+  </div>
 
   <!-- Comment #4 (Reply to comment #2) -->
-  2
-  <img src="./images/avatars/image-juliusomo.png" alt="profile" />
-  juliusomo 
-  2 days ago
-  @ramsesmiron I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
+  <div class="comment-container">
+    <div class="up-vote-container">
+      <img src="images/icon-plus.svg" alt="upvote-btn">
+      <p>2</p>
+      <img src="images/icon-minus.svg" alt="downvote-btn">
+    </div>
+    <section class="comment-info">
+      <div class="info-upper-section">
+        <div class="profile-info">
+          <img src="./images/avatars/image-juliusomo.png" alt="profile" class="profile-img" />
+          <p class="user-name">juliusomo </p>
+          <p class="comment-date">2 days ago</p>
+        </div>
+        <div class="comment-buttons">
+          <button><img src="images/icon-delete.svg" alt="Delete button">Delete</button>
+          <button><img src="images/icon-edit.svg" alt="Edit button">Edit</button>
+        </div>
+      </div>
+      <p class="comment-text">@ramsesmiron I couldn't agree more with this. Everything moves so fast and it always seems
+        like everyone knows the newest library/framework. But the fundamentals are what stay constant.</p>
+    </section>
+  </div>
+
+  <!--  Add a comment div   -->
+  <form class="comment-container">
+    <img src="./images/avatars/image-juliusomo.png" alt="profile" class="profile-img" />
+    <input type="text">
+    <button>Send</button>
+  </form>
 
 
-  
   <div class="attribution">
-    Challenge adapted from <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9" target="_blank">Frontend Mentor</a>. 
+    Challenge adapted from <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9"
+      target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
