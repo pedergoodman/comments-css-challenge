@@ -1,52 +1,90 @@
 :root{
+  --font-family: 'Rubix', sans-serif;
+  --font-size: 16px;
   --comment-bg: #459f81;
   --vote-bg: rgba(138, 43, 226, 60%);
+  --font-accent-color: hsl(238, 40%, 52%);
+  --bg-color: hsl(239, 57%, 85%);
+  --page-bg: hsl(223, 19%, 93%);
+  --border: 1px solid hsl(211, 10%, 45%);
+
+/*   #### Primary */
+
+  --Moderate-blue: hsl(238, 40%, 52%);
+  --oft-Red: hsl(358, 79%, 66%);
+  --Light-grayish-blue: hsl(239, 57%, 85%);
+  --Pale-red: hsl(357, 100%, 86%);
+  
+  /* #### Neutral */
+  
+  --Dark-blue: hsl(212, 24%, 26%);
+  --Grayish-Blue: hsl(211, 10%, 45%);
+  --Light-gray: hsl(223, 19%, 93%);
+  --Very-light-gray: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+
+
 }
 
 body {
   text-align: center;
+  background-color: var(--Light-gray);
 }
 
 img.profile-img {
   width: 40px;
 }
 
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+div#all-comments {
+  margin: auto;
+  min-width: 550px;
+  max-width: 690px;
+}
 
 
 .comment-container {
-  background: var(--comment-bg);
+  background: var(--White);
   border-radius: 15px;
-  /* padding: 15px 25px; */
-  margin: 10px auto;
+  padding: 7px 24px;
+  margin: 20px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-width: 420px;
-  max-width: 620px;
   min-height: 120px;
 }
 
 
 .up-vote-container * {
-  background-color: blue;
+  /* background-color: blue; */
   margin: 6px 0px;
   font-size: 18px;
+  font-weight: 700;
+  color: var(--font-accent-color);
   text-align: center;
 }
 
 .up-vote-container img {
-  background-color: rgb(194, 36, 173);
+  /* background-color: rgb(194, 36, 173); */
   scale: 150%;
 }
 
 .up-vote-container {
-  padding: 14px;
-  margin: 15px;
-  background-color: var(--vote-bg);
-  border-radius: 14px;
+  padding: 5px 10px;
+  width: 20px;
+  margin-right: 20px;
+  background-color: var(--Light-gray);
+  border-radius: 10px;
 }
 
-
+.up-vote-container p {
+  margin: 12px 0px;
+}
 
 /* right half of comment box */
 section.comment-info {
@@ -75,40 +113,107 @@ section.comment-info {
   flex-wrap: nowrap;
   justify-content: flex-start;
   flex-direction: row;
+  font-family: var(--font-family);
 }
 
 .profile-info .user-name {
-  padding-left: 10px;
+  margin-left: 10px;
   font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
   /* color: black; */
 }
 
+.profile-info .you-signifier {
+  padding: 1px 6px 4px 6px;
+  margin-left: 10px;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--White);
+  background-color: var(--font-accent-color);
+  border-radius: 3px;
+}
+
 .profile-info .comment-date {
-  padding-left: 10px;
+  margin-left: 10px;
   font-size: 18px;
   color: rgb(76, 76, 76);
+  width: max-content;
 }
 
 /* For reply/ edit / delete button containers */
-button {
+.comment-buttons button {
   display: flex;
-  margin: 0 20px;
+  margin: 3px 6px;
   font-size: 18px;
   align-items: center;
-  border-color: var(--vote-bg);
+  border: none;
   background: none;
-  color: rgb(138, 43, 226);
+  /* color: rgb(138, 43, 226); */
   padding: 0;
   height: auto;
+  cursor: pointer;
+}
+
+/* hover Interaction */
+.comment-buttons button:hover {
+  filter: brightness(150%)
+}
+
+.up-vote-container button {
+  display: flex;
+  margin: auto;
+  cursor: pointer;
+  /* font-size: 18px; */
+  /* align-items: center; */
+  border: none;
+  /* background: none; */
+  /* color: rgb(138, 43, 226); */
+  padding: 0;
+  /* height: auto; */
+}
+
+.comment-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .comment-buttons img{
     padding-right: 6px;
+} 
+
+.reply-btn, .edit-btn, .up-vote-container img{
+  color: var(--font-accent-color);
+  font-weight: bold;
+}
+
+.delete-btn {
+  color: hsl(358, 79%, 66%);
+  font-weight: bold;
 }
 
 .comment-text {
-  margin: 0;
+  margin: 6px 0 14px 0;
+  text-align: left;
+  font-family: var(--font-family);
+  line-height: 1.3em;
 }
 
-/* Comment text */
+/* Comment @ user link */
+.comment-text a {
+  font-weight: bold;
+}
+
+.reply-comment-container {
+  border-left: 2px solid var(--Light-grayish-blue);
+  margin-left: 15px;
+  padding-left: 24px;
+}
+
+
+
+
+
