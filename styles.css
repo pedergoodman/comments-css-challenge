@@ -207,8 +207,8 @@ section.comment-info {
 
 .reply-comment-container {
   border-left: 2px solid var(--Grayish-Blue);
-  margin-left: 15px;
-  padding-left: 24px;
+  margin-left: 36px;
+  padding-left: 32px;
 }
 
 
@@ -257,5 +257,7 @@ textarea {
   font-weight: bold;
 }
 
-
+#send-btn:hover {
+  filter: brightness(130%);
+}
 
